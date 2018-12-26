@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Pixabay Browser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+<body>
+<div id="main">
+    <div class="panel" id="header">
+        <div class="picture">
+            My Pixabay Browser
+        </div>
+        <div class="nav-bar">
+            <div>Home</div>
+            <div class="selected">Photos</div>
+            <div>Videos</div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="tab home">
+            <div class="top-bar">
+                <div class="title"><span class="fa fa-home"></span> Welcome to Pixabay Photo and Video Browser!</div>
+            </div>
+            <div class="panel">
+                <div class="illustration">
+                    <img src="/img/templates.png" />
+                    <div class="comment">Ready to start creating your own templates system!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab images selected">
+            <div class="top-bar">
+                <div class="title"><span class="fa fa-home"></span> Search Photos!</div>
+                <div class="search-bar">
+                    <input type="text" placeholder="type your search here">
+                    <span class="fa fa-search"></span>
+                </div>
+            </div>
+            <div id="photo-list" class="list">
+                <div class="item panel">
+                    <div class="image" style="background-image: url('/img/pix1.jpg')"></div>
+                    <div class="details">
+                        <div class="user">
+                            <div class="thumb" style="background-image: url('/img/user.png')"></div>
+                            <div>user name</div>
+                        </div>
+                        <div class="views"><span class="fa fa-eye"></span> 1000</div>
+                        <div class="likes"><span class="fa fa-heart"></span> 15</div>
+                    </div>
+                </div>
+                <div class="item panel">
+                    <div class="image" style="background-image: url('/img/pix2.jpg')"></div>
+                    <div class="details">
+                        <div class="user">
+                            <div class="thumb" style="background-image: url('/img/user.png')"></div>
+                            <div>user name</div>
+                        </div>
+                        <div class="views"><span class="fa fa-eye"></span> 1000</div>
+                        <div class="likes"><span class="fa fa-heart"></span> 15</div>
+                    </div>
+                </div>
+                <div class="item panel">
+                    <div class="image" style="background-image: url('/img/pix3.jpg')"></div>
+                    <div class="details">
+                        <div class="user">
+                            <div class="thumb" style="background-image: url('/img/user.png')"></div>
+                            <div>user name</div>
+                        </div>
+                        <div class="views"><span class="fa fa-eye"></span> 1000</div>
+                        <div class="likes"><span class="fa fa-heart"></span> 15</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab images">
+
+        </div>
+    </div>
+</body>
+</html>
