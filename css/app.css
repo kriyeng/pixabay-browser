@@ -71,7 +71,7 @@ PANELS
 }
 #header .picture{
     height: 150px;
-    background-image: url('/img/header.jpg');
+    background-image: url('../img/header.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
