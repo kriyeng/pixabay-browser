@@ -2,6 +2,7 @@
 ( function(window) {
 
     'use strict';
+
     var api_connector = {
         searchPhotos : searchPhotos
     };
@@ -14,18 +15,24 @@
             lang : 'en',
             page : page ? page : null
         };
-        ajax.get('https://pixabay.com/api/', data, function (result) {
+        ajax.get('https://pixabay.com/api/', data, function (err, result) {
 
-            if(result && result.hits){
+            if(!err && result && result.hits){
                 var items = [];
                 result.hits.forEach(function (item) {
                     items.push({
                             type : 'cloud',
                             preview : item.previewURL,
-                            url : item.fullHDURL
+                            url : item.fullHDURL,
+                            user : item.user,
+                            user_img : item.userImageURL,
+                            views : item.views,
+                            likes : item.likes
                         });
                 });
                 callback({ totalHits : result.totalHits, items : items });
+            } else {
+                callback();
             }
         });
     }
