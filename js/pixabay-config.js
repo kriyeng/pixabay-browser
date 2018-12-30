@@ -1,1 +1,0 @@
-pixabay_key = 'your-key-here';
