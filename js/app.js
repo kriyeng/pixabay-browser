@@ -37,13 +37,21 @@ function renderPictures(pictures) {
                 '            <div class="thumb" style="background-image: url(\'' + item.user_img + '\')"></div>' +
                 '            <div>' + item.user + '</div>' +
                 '        </div>' +
-                '        <div class="views"><span class="fa fa-eye"></span> 1000</div>' +
-                '        <div class="likes"><span class="fa fa-heart"></span> 15</div>' +
+                '        <div class="views"><span class="fa fa-eye"></span> ' + formatTotals(item.views) + '</div>' +
+                '        <div class="likes"><span class="fa fa-heart"></span> ' + formatTotals(item.likes) + '</div>' +
                 '    </div>';
 
             photo_list.append(newDiv);
         })
     }
+}
 
-
+function formatTotals(views){
+    if(views > 1000000){
+        return Math.floor(views / 10000) + 'M'
+    }
+    if(views > 1000){
+        return Math.floor(views / 1000) + 'K'
+    }
+    return views
 }
