@@ -16,10 +16,10 @@
         <div class="picture">
             My Pixabay Browser
         </div>
-        <div class="nav-bar">
-            <div>Home</div>
-            <div class="selected">Photos</div>
-            <div>Videos</div>
+        <div class="nav-bar" id="menu-buttons">
+            <div class="button">Home</div>
+            <div class="button selected">Photos</div>
+            <div class="button">Videos</div>
         </div>
     </div>
 
@@ -36,15 +36,15 @@
             </div>
         </div>
 
-        <div class="tab images selected">
+        <div class="tab photos selected">
             <div class="top-bar">
                 <div class="title"><span class="fa fa-home"></span> Search Photos!</div>
                 <div class="search-bar">
-                    <input type="text" placeholder="type your search here" onkeyup="serachKeyUp(event);" />
+                    <input type="text" placeholder="type your search here" onkeyup="searchKeyUp(event, 'photos');" />
                     <span class="fa fa-search"></span>
                 </div>
             </div>
-            <div id="photo-list" class="list">
+            <div id="photos-list" class="list">
                 <div class="item panel">
                     <div class="image" style="background-image: url('img/pix1.jpg')"></div>
                     <div class="details">
@@ -81,8 +81,16 @@
             </div>
         </div>
 
-        <div class="tab video">
-
+        <div class="tab videos">
+            <div class="top-bar">
+                <div class="title"><span class="fa fa-home"></span> Search Videos!</div>
+                <div class="search-bar">
+                    <input type="text" placeholder="type your search here" onkeyup="searchKeyUp(event, 'videos');" />
+                    <span class="fa fa-search"></span>
+                </div>
+            </div>
+            <div id="videos-list" class="list">
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="js/ajax.js"></script>
